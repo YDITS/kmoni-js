@@ -1,10 +1,11 @@
-/**!
+/*!
  * 
  * Kmoni.js
  * 
- * Copyright (C) よね/Yone
- * 
+ * Copyright (C) 2025-2026 よね/Yone
  * Licensed under the MIT License.
+ * 
+ * https://github.com/YDITS/kmoni-js
  * 
  */
 
