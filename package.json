@@ -8,6 +8,14 @@
         "url": "https://www.yoneyo.com/"
     },
     "license": "MIT",
+    "packageManager": "pnpm@12.4.2",
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "version": "12.4.2",
+            "onFail": "download"
+        }
+    },
     "homepage": "https://github.com/YDITS/kmoni-js#readme",
     "repository": {
         "type": "git",
