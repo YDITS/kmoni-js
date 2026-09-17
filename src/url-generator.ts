@@ -12,7 +12,8 @@
 import { KmoniDateGenerator } from "./date-generator.js";
 
 export class KmoniUrlGenerator {
-    static readonly BASE_URL = "https://www.lmoni.bosai.go.jp/monitor/webservice/hypo/eew/";
+    static readonly BASE_URL = "http://www.kmoni.bosai.go.jp/webservice/hypo/eew/";
+    // static readonly BASE_URL = "http://www.lmoni.bosai.go.jp/monitor/webservice/hypo/eew/";
 
     static generateUrl({ date, delayOffsetMs }: { date: Date, delayOffsetMs?: number }): URL {
         const formattedDate = KmoniDateGenerator.generateDateString({ date, delayOffsetMs });
