@@ -9,7 +9,7 @@
  * 
  */
 
-export type KmoniDataType = {
+export type KmoniDataModel = {
     "result": {
         "status": string,
         "message": string,

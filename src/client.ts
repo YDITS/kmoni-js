@@ -9,8 +9,8 @@
  * 
  */
 
-import { KmoniData } from "./kmoni-data-generator.js";
-import { KmoniUrlGenerator } from "./kmoni-url-generator.js";
+import { KmoniData } from "./data-generator.js";
+import { KmoniUrlGenerator } from "./url-generator.js";
 
 interface FetchOptions {
     targetDate?: Date;

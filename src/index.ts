@@ -9,10 +9,10 @@
  * 
  */
 
-import { KmoniClient } from "./kmoni.js";
-import { KmoniData } from "./kmoni-data-generator.js";
-import { KmoniDataType } from "./kmoni-data-type.js";
-import { KmoniDateGenerator } from "./kmoni-date-generator.js";
-import { KmoniUrlGenerator } from "./kmoni-url-generator.js";
+import { KmoniClient } from "./client.js";
+import { KmoniData } from "./data-generator.js";
+import { KmoniDataModel } from "./data-type.js";
+import { KmoniDateGenerator } from "./date-generator.js";
+import { KmoniUrlGenerator } from "./url-generator.js";
 
-export { KmoniClient, KmoniData, KmoniDataType, KmoniDateGenerator, KmoniUrlGenerator };
+export { KmoniClient, KmoniData, KmoniDataModel, KmoniDateGenerator, KmoniUrlGenerator };

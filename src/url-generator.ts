@@ -9,7 +9,7 @@
  * 
  */
 
-import { KmoniDateGenerator } from "./kmoni-date-generator.js";
+import { KmoniDateGenerator } from "./date-generator.js";
 
 export class KmoniUrlGenerator {
     static readonly BASE_URL = "https://www.lmoni.bosai.go.jp/monitor/webservice/hypo/eew/";

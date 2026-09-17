@@ -9,8 +9,8 @@
  * 
  */
 
-import { KmoniDataType } from "./kmoni-data-type.js";
-import { KmoniDateGenerator } from "./kmoni-date-generator.js";
+import { KmoniDataModel } from "./data-type.js";
+import { KmoniDateGenerator } from "./date-generator.js";
 
 export class KmoniData {
     get isSuccess(): boolean {
@@ -44,13 +44,13 @@ export class KmoniData {
         return this._data.alertflg === "警報";
     }
 
-    get data(): KmoniDataType {
+    get data(): KmoniDataModel {
         return this._data;
     }
 
-    private _data: KmoniDataType;
+    private _data: KmoniDataModel;
 
-    constructor(data: KmoniDataType) {
+    constructor(data: KmoniDataModel) {
         this._data = data;
     }
 }
