@@ -1,37 +1,37 @@
 # Kmoni.js
 
-[Read in English →](./README.md)
+[Read in English >](./README.md)
 
 ## 概要
 
-**Kmoni.js** は、[防災科学技術研究所（NIED）](https://www.bosai.go.jp/)が提供する強震モニタのJSONデータを扱うTypeScript/JavaScriptライブラリです。
+**Kmoni.js** は、[防災科学技術研究所 (NIED)](https://www.bosai.go.jp/) が提供する強震モニタのJSONデータを扱う TypeScript / JavaScript ライブラリです。
 
 ## 利用方法
 
-### パッケージをインストールする
+### 1. パッケージをインストール
 
 ```bash
-npm install git+https://github.com/YDITS/kmoni.js.git
+npm i YDITS/kmoni-js
 ```
 
-### パッケージをインポートする
+### 2. パッケージをインポート
 
 TypeScript:
 ```ts
-import { KmoniClient } = from "kmoni.js";
+import { KmoniClient } = from "kmoni-js";
 ```
 
 JavaScript (ビルド後):
 ```js
-import { KmoniClient } = from "kmoni.js/dist/index.js";
+import { KmoniClient } = from "kmoni-js/dist/index.js";
 ```
 
-## ビルド
+## 開発
 
-### 1. パッケージをインストールする
+### 1. パッケージをインストール
 
 ```bash
-npm install
+pnpm i
 ```
 
 ### 2. ビルド
@@ -39,7 +39,7 @@ npm install
 JavaScript にコンパイルします。
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 コンパイルされたJavaScriptファイルが `dist/` ディレクトリに出力されます。
@@ -48,4 +48,4 @@ npm run build
 
 [MIT License](./LICENSE) のもとでライセンスされます。
 
-Copyright &copy; よね/Yone
+Copyright © 2025-2026 よね/Yone

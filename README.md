@@ -1,37 +1,37 @@
 # Kmoni.js
 
-[日本語で読む →](./README_JP.md)
+[日本語で読む >](./README_JP.md)
 
 ## Overview
 
-**Kmoni.js** is a TypeScript/JavaScript library for handling JSON data provided by the Strong Motion Monitor of [the National Research Institute for Earth Science and Disaster Resilience (NIED)](https://www.bosai.go.jp/) in Japan.
+**Kmoni.js** is a TypeScript / JavaScript library for handling JSON data provided by the Kyoshin Monitor (kmoni) of [the National Research Institute for Earth Science and Disaster Resilience (NIED)](https://www.bosai.go.jp/) in Japan.
 
 ## Usage
 
-### Install Package
+### 1. Install
 
 ```bash
-npm install git+https://github.com/YDITS/kmoni.js.git
+npm i YDITS/kmoni-js
 ```
 
-### Import Package
+### 2. Import
 
 TypeScript:
 ```ts
-import { KmoniClient } from "kmoni.js";
+import { KmoniClient } from "kmoni-js";
 ```
 
 JavaScript (after build):
 ```js
-import { KmoniClient } from "kmoni.js/dist/index.js";
+import { KmoniClient } from "kmoni-js/dist/index.js";
 ```
 
-## Build
+## Development
 
 ### 1. Install Packages
 
 ```bash
-npm install
+pnpm i
 ```
 
 ### 2. Build
@@ -39,7 +39,7 @@ npm install
 Compile to JavaScript
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Emitted JavaScript files will be output to the `dist/` directory.
@@ -48,4 +48,4 @@ Emitted JavaScript files will be output to the `dist/` directory.
 
 Licensed under the [MIT License](./LICENSE).
 
-Copyright &copy; よね/Yone
+Copyright © 2025-2026 よね/Yone
