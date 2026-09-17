@@ -13,12 +13,6 @@ import { KmoniDataType } from "./kmoni-data-type.js";
 import { KmoniDateGenerator } from "./kmoni-date-generator.js";
 
 export class KmoniData {
-    constructor(data: KmoniDataType) {
-        this._data = data;
-    }
-
-    private _data: KmoniDataType;
-
     get isSuccess(): boolean {
         return this._data.result?.status === "success";
     }
@@ -52,5 +46,11 @@ export class KmoniData {
 
     get data(): KmoniDataType {
         return this._data;
+    }
+
+    private _data: KmoniDataType;
+
+    constructor(data: KmoniDataType) {
+        this._data = data;
     }
 }

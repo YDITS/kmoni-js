@@ -23,17 +23,17 @@ interface PollingOptions {
 }
 
 export class KmoniClient {
-    constructor() {
-        if (typeof fetch !== "function") {
-            throw new TypeError("Global `fetch` function is not available.");
-        }
-    }
-
     static readonly DEFAULT_POLLING_INTERVAL_MS = 2000;
     static readonly POLLING_LIMIT_MS = 900;
 
     private lastFetchDate: Date = new Date(0);
     private pollingInterval: ReturnType<typeof setInterval> | null = null;
+
+    constructor() {
+        if (typeof fetch !== "function") {
+            throw new TypeError("Global `fetch` function is not available.");
+        }
+    }
 
     async fetch({ targetDate }: FetchOptions = {}): Promise<KmoniData> {
         const nowDate = new Date();
@@ -79,7 +79,6 @@ export class KmoniClient {
 
         return;
     }
-
 
     stopPolling(): void {
         if (this.pollingInterval) {
