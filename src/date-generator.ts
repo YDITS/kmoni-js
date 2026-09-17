@@ -10,22 +10,29 @@
  */
 
 export class KmoniDateGenerator {
-    static generateDateString({ date, delayOffset }: { date: Date, delayOffset?: number }): string {
-        const jstDate = new Date(date.getTime() + 9 * 60 * 60 * 1000); // JST (UTC+9)
+    static generateDateString({ date, delayOffsetMs }: { date: Date, delayOffsetMs?: number }): string {
+        const targetDate = new Date(date);
+        const nineHoursMs = 1000 * 60 * 60 * 9;  // 1000ms * 60s * 60m * 9h
 
-        if (delayOffset) {
-            jstDate.setSeconds(jstDate.getSeconds() - 2);
+        if (delayOffsetMs === undefined || !(Number.isInteger(delayOffsetMs))) {
+            delayOffsetMs = 2000;
         }
+
+        targetDate.setTime(targetDate.getTime() - delayOffsetMs);
+        targetDate.setTime(targetDate.getTime() + nineHoursMs); // JST (UTC+9)
 
         const pad = (n: number) => String(n).padStart(2, "0");
 
+        /*
+         * ローカルを参照すると実行環境によって時刻が定まらないため, Date はローカルタイムを参照せず, UTCを基準として扱う.
+         */
         return [
-            jstDate.getFullYear(),
-            pad(jstDate.getMonth() + 1),
-            pad(jstDate.getDate()),
-            pad(jstDate.getHours()),
-            pad(jstDate.getMinutes()),
-            pad(jstDate.getSeconds()),
+            targetDate.getUTCFullYear(),
+            pad(targetDate.getUTCMonth() + 1),
+            pad(targetDate.getUTCDate()),
+            pad(targetDate.getUTCHours()),
+            pad(targetDate.getUTCMinutes()),
+            pad(targetDate.getUTCSeconds()),
         ].join("");
     }
 
